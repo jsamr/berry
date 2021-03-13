@@ -21,8 +21,8 @@ function wrapOutput() {
   };
 }
 
-// eslint-disable-next-line arca/no-default-export
-export default [
+/** @type {Array<import('rollup').RollupOptions>} */
+const options = [
   {
     input: `./sources/worker-zip/Worker.ts`,
     output: {
@@ -44,3 +44,6 @@ export default [
     ],
   },
 ];
+
+// eslint-disable-next-line arca/no-default-export
+export default options;
